@@ -1,0 +1,94 @@
+source 'https://rubygems.org'
+gem 'rails', '~> 4.0.0'
+gem 'pg'
+
+
+gem 'sass-rails', '~> 4.0.0'
+gem 'susy'
+gem 'compass-rails'
+#gem 'bootstrap-sass', '~> 3.0.3.0'
+#gem 'font-awesome-sass'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'jbuilder', '~> 1.2'
+gem 'acts_as_list'
+
+gem 'uglifier', '>= 1.0.3'
+gem "font-awesome-rails"
+gem 'angularjs-rails'
+
+gem "sugar-rails", "~> 1.4.0"
+#gem "bootstrap-modal-rails", "~> 2.2.0"
+gem 'turbolinks'
+
+gem 'active_model_serializers'
+gem 'protected_attributes', '~> 1.0.1'   # TODO get rid of this
+
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl'
+end
+
+
+
+gem 'ransack' #searching
+gem 'will_paginate', '~> 3.0'
+
+group :development do
+  gem 'thin'
+  gem "better_errors", ">= 0.7.2"
+  gem "quiet_assets", ">= 1.0.2"
+  #gem 'xray-rails'
+  #gem 'rails-footnotes'
+  gem "rails-erd"
+end
+
+gem 'open4'  # file system
+
+
+# authorisation
+gem "devise", ">= 2.2.3"
+#gem "cancan", ">= 1.6.9"
+#gem "rolify", ">= 3.2.0"
+
+
+gem "simple_form", :git => 'git://github.com/plataformatec/simple_form.git'
+gem "figaro", ">= 0.6.3"
+#gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri_19, :rbx]
+gem "roo"         # spreadsheet import
+gem 'axlsx'       # spreadsheet export
+gem 'zip-zip'     # dependency for axlsx
+gem 'prawn'       # pdf report
+
+gem 'seed_dump'   # create a seed file from existing db
+
+gem 'delayed_job_active_record'
+#gem 'dj_mon'
+gem 'daemons'
+
+gem "bio-ucsc-api", "~> 0.5.2"
+gem 'debugger'
+
+gem 'capistrano'
+gem 'rvm-capistrano'
+gem 'unicorn'
+
+
+gem 'execjs'
+gem 'therubyracer'
+
+
+# Rails 3.2 compatability
+#gem 'actionpack-action_caching', '~> 1.0.0'
+#gem 'actionpack-page_caching', '~> 1.0.0'
+#gem 'actionpack-xml_parser', '~> 1.0.0'
+#gem 'actionview-encoded_mail_to', '~> 1.0.4'
+##gem 'activerecord-session_store', '~> 0.0.1'
+#gem 'activeresource', '~> 4.0.0.beta1'
+
+#gem 'rails-observers', '~> 0.1.1'
+#gem 'rails-perftest', '~> 0.0.2'
+
+
+

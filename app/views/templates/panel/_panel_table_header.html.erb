@@ -1,0 +1,63 @@
+<thead>
+  <tr>
+    <th colspan="{{numColumns}}">
+	  <div class="btn-group">
+		<button class="btn btn-xs btn-success" ng-click="lookupSequences()">Lookup Seq</button>
+		<button class="btn btn-xs btn-success configure-btn">Configure</button>
+        <button class="btn btn-xs btn-succes" ng-click="createPrimers()">Create Primers</button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-xs btn-info dropdown-toggle" data-toggle="dropdown">Order<span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#" ng-click="exportXLS()">Vendor A</a></li>
+            <li><a href="#" ng-click="exportPDF()">Vendor B</a></li>
+            <li><a href="#" ng-click="exportCSV()">Vendor C</a></li>
+            <li class="divider"></li>
+            <li><a href="#" ng-click="exportSettings()">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-xs btn-info dropdown-toggle" data-toggle="dropdown">Export<span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#" ng-click="exportXLS()">Excel</a></li>
+          <li><a href="#" ng-click="exportPDF()">PDF</a></li>
+          <li><a href="#" ng-click="exportCSV()">CSV</a></li>
+          <li class="divider"></li>
+          <li><a href="#" ng-click="exportSettings()">Settings</a></li>
+        </ul>
+      </div>
+      <button class="btn btn-xs btn-danger mass-delete-btn">Delete</button>
+      <div class="form-group col-sm-1 col-md-1">
+          <label for="idForwardOffset">Forward</div>
+          <input id="idForwardOffset" class="form-control input-sm" ng-model="forwardOffset">
+          <label for="idreverseOffset">Reverse</div>
+          <input id="idReverseOffset" class="form-control input-sm" ng-model="reverseOffset">
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default">S</button>
+        <button type="button" class="btn btn-default">M</button>
+        <button type="button" class="btn btn-default">L</button>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default">Tiling</button>
+        <button type="button" class="btn btn-default">MultiPlex</button>
+        <button type="button" class="btn btn-default">None</button>
+      </div>
+    </th>
+  </tr>
+       
+  <tr>
+    <th><button class="btn btn-xs btn-default" ng-click="showAllColumns()" data-original-title="first tooltip"><i class="fa fa-arrows-alt"></i></button><hr/>
+        <input id="selectall" type="checkbox" ng-click="selectAll($event)"/>
+    </th>
+	<th ng-repeat="field in fields" key="{{field.key}}">
+		<div class="btn-group pull-left">
+			<button class="btn btn-xs btn-default" ng-class="iconWrenchAdditionalClass(field.key)" ng-click="invokeFilterModal(field.key, field.value)"><i class="icon-wrench"></i></button>
+			<button class="btn btn-xs btn-default" ng-click="hideColumn(field.key)">x</button>
+		</div>
+		<hr/>
+		{{field.value}}
+	</th>
+    <th></th>
+  </tr>
+</thead>

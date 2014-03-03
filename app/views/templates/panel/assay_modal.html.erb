@@ -1,0 +1,70 @@
+<div class="modal-header">
+  <button type="button" class="close" ng-click="cancel()">&times;</button>
+  <h4 class="modal-title">Assay Results</h4>
+  Assay: {{assay_id}}
+</div>
+<div class="modal-body">
+    <div class="panel panel-default">
+      <div class="panel-heading">Primer 3 Run Results</div>
+      <div class="panel-body">     
+        Pairs {{primer3Output.primer_pair_num_returned}}  |  Left {{primer3Output.primer_left_num_returned}}  |  Right {{primer3Output.primer_right_num_returned}}
+      </div>
+    </div>
+    
+    
+    
+    <div class="row">
+	  <div class="col-sm-12 col-md-12" style="overflow: auto">
+		<table class="table table-striped table-bordered table-condensed">
+			<tbody>
+			<tr>
+				<th></th>
+				<th></th>
+				<th>Left Primer</th>
+				<th>Right Primer</th>
+				<th>Left GC%</th>
+				<th>Right GC%</th>
+				<th>Left Tm</th>
+				<th>Right Tm</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+    		<tr ng-repeat="primerPair in primerPairs">
+                <td>
+	              <span ng-if="primerPair.selected == 't'">
+                    <span class="label label-important">Selected</span>
+                </span>
+                <span ng-if="primerPair.selected == 'f'">
+                    <button type="button" class="btn btn-mini btn-success" ng-click="select(primerPair)">Select</button>
+                </span>
+				</td>
+                <td>{{primerPair.id}}</td>
+	 			<td>{{primerPair.primer_left_sequence}}</td>
+				<td>{{primerPair.primer_right_sequence}}</td>
+	 			<td>{{primerPair.primer_left_gc_percent}}</td>
+	 			<td>{{primerPair.primer_right_gc_percent}}</td>
+	 			<td>{{primerPair.primer_left_tm}}</td>
+	 			<td>{{primerPair.primer_right_tm}}</td>
+	 			<td>{{primerPair.primer_left_self_any_th}}</td>
+	 			<td>{{primerPair.primer_right_self_any_th}}</td>
+         		<td>{{primerPair.primer_left_self_end_th}}</td>
+	 		    <td>{{primerPair.primer_right_self_end_th}}</td>
+	 			<td>{{primerPair.primer_left_hairpin_th}}</td>
+	 			<td>{{primerPair.primer_right_hairpin_th}}</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+  </div>			
+</div>
+<div class="modal-footer">        
+  <button type="button" class="btn btn-default" ng-click="cancel()">Cancel</button>
+  <button type="button" class="btn btn-primary" ng-click="ok()">Apply</button>
+</div>
+
+
+

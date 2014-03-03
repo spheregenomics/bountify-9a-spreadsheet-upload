@@ -1,0 +1,27 @@
+<div ng-switch on="assay.status">
+   <div ng-switch-when="ready" class="btn-group">
+      <a href="#" class="btn btn-xs btn-info btn-disabled" role="button" data-toggle="modal">UCSC</a>
+      <a href="#" class="btn btn-xs btn-info btn-disabled" role="button" data-toggle="modal">Configure</a>
+      <a href="#" class="btn btn-xs btn-info btn-disabled" role="button" data-toggle="modal">Assay</a>
+   </div>
+   <div ng-switch-when="coords" class="btn-group">
+	  <button class="btn btn-xs btn-info" ng-click="invokeUCSCModal(assay.chrom,assay.chrom_start,assay.chrom_end)">UCSC</button>        
+      <a href="#" class="btn btn-xs btn-info btn-disabled" role="button" data-toggle="modal">Configure</a>
+      <a href="#" class="btn btn-xs btn-info btn-disabled" role="button" data-toggle="modal">Assay</a>
+   </div>
+   <div ng-switch-when="located" class="btn-group">
+ 	  <button class="btn btn-xs btn-info" ng-click="invokeUCSCModal(assay.chrom,assay.chrom_start,assay.chrom_end)">UCSC</button>        
+	  <button class="btn btn-xs btn-info" ng-click="invokeConfigureModal(assay.id)">Configure</button>    
+      <a href="#" class="btn btn-xs btn-info btn-disabled" role="button" data-toggle="modal">Assay</a>
+   </div>
+   <div ng-switch-when="complete" class="btn-group">
+  	  <button class="btn btn-xs btn-info" ng-click="invokeUCSCModal(assay.chrom,assay.chrom_start,assay.chrom_end)">UCSC</button>        
+ 	  <button class="btn btn-xs btn-info" ng-click="invokeConfigureModal(assay.id)">Configure</button>    
+ 	  <button class="btn btn-xs btn-info" ng-click="invokeAssayModal(assay)">Assay</button>    
+   </div>
+   <div ng-switch-when="error" class="btn-group">
+      <b>ERROR<b>
+   </div>
+</div><%# ng-switch %>
+
+

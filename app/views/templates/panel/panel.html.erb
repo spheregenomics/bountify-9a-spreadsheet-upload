@@ -1,0 +1,32 @@
+<div ng-cloak ng-init="init()"></div>
+<%= render partial: "templates/shared/panel_description" %>
+
+<div class="row">
+<div class="col-sm-12 col-md-12">
+    <table class="table table-bordered table-condensed table-striped">
+        <%= render partial: 'templates/panel/panel_table_header' %>
+  
+        <tbody>
+		<tr ng-repeat="assay in assays">
+          <td>
+            <input type="checkbox" name="selected" ng-checked="isSelected(assay.id)" ng-click="updateSelection($event, assay.id)"/>  
+          </td>
+		  <td key="id">{{assay.id}}</td>
+		  <td key="source">{{assay.source}}</td>
+		  <td key="status">{{assay.status}}</td>
+		  <td key="chrom">{{assay.chrom}}</td>
+		  <td key="chrom_start">{{assay.chrom_start}}</td>
+		  <td key="chrom_end">{{assay.chrom_end}}</td>
+		  <td key="gene">{{assay.gene}}</td>
+		  <td key="cosmic_mut_id">{{assay.cosmic_mut_id}}</td>
+		  <td key="primer_left">{{assay.primer_left}}</td>
+		  <td key="primer_right">{{assay.primer_right}}</td>
+		  <td><%= render partial: 'templates/panel/modal_buttons' %></td>
+          </tr>
+      </tbody>
+      <%= render :partial => "templates/panel/panel_table_footer" %>
+      </table>
+  </div>
+</div>
+
+selected: {{selected}}

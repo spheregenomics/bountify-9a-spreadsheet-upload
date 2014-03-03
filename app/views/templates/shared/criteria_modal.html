@@ -1,0 +1,38 @@
+
+    <div class="modal-header">
+      <button type="button" class="close" ng-click="cancel()">&times;</button>
+      <h4 class="modal-title">Criteria for {{modalCriteriaList.field_name}}</h4>
+    </div>
+    <div class="modal-body">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" ng-click="modalCriteriaList.type='AND'" ng-class="activeWhenType('AND')" btn-checkbox>AND</button>
+            <button type="button" class="btn btn-primary" ng-click="modalCriteriaList.type='OR'" ng-class="activeWhenType('OR')" btn-checkbox>OR</button>
+        </div>
+        <hr/>
+        <div ng-repeat="criteria in modalCriteriaList.criterias">
+          <div class="row">
+              <div class="col-xs-4">
+                  <select class="form-control" ng-options="item.id as item.name for item in possible_conditions" ng-model="criteria.condition" ng-change="conditionChanged(criteria)"></select>
+              </div>
+              <div class="col-xs-4">
+                  <span ng-repeat="value in criteria.values">
+                      <input type="text" class="form-control" placeholder="hi there" ng-model="value.data">
+                  </span>
+              </div>
+              <div class="col-xs-4">
+                  <span ng-show="multiFieldCriteria(criteria)" style="display: none;">
+                     <a href="" ng-click='criteria.values.push({data: ""})'>Add Value</a>&nbsp;|&nbsp;
+                  </span>
+                  <a href="" ng-click="modalCriteriaList.criterias.removeAt($index)">Remove</a>
+              </div>
+           </div>
+           <br/>
+        </div>
+        <br/>
+        <button type="button" class="btn btn-sm" ng-click="modalCriteriaList.criterias.push(newCriteria())">Add Criteria</button>
+      </div>
+    </div>
+    <div class="modal-footer">        
+      <button type="button" class="btn btn-default" ng-click="cancel()">Cancel</button>
+      <button type="button" class="btn btn-primary" ng-click="ok()">Apply</button>
+    </div>

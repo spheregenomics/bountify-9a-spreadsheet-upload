@@ -1,0 +1,22 @@
+<div class="panel-group" id="accordion1">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+            Spreadsheet Upload
+          </a>
+        </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+        <form name="uploadForm" reset-form="resetForm" ng-submit="submitForm()" ng-controller="UploadCtrl" enctype="multipart/form-data">
+          <label for="assembly">Assembly</label>
+          <input type="text" name="assembly" ng-model="assembly" />
+          <input type="file" name="spreadsheet" ng-file-select="onFileSelect($files)" />
+          <input type="submit" value="Import" class="btn btn-small btn-info pull-right" />
+          <p ng-show="uploaded">Success! <a ng-href="/batches/{{batchID}}">Show batch</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

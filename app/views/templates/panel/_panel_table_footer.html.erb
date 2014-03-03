@@ -1,0 +1,19 @@
+<tfoot>
+  <tr>
+    <th colspan="{{numColumns}}">
+    <span class="pull-left>">    
+      Showing 1 to 10 of 2032 entries
+    </span>
+    <ul class="pagination pull-left">
+      <li ng-class="{disabled: currentPage == 0}">
+        <a href ng-click="setPage(currentPage - 1)">« Prev</a>
+      </li>
+      <li>
+        <a href="#">page {{currentPage}}</a>
+      </li>
+      <li ng-class="{disabled: currentPage == pagedItems.length - 1}">
+        <a href ng-click="setPage(currentPage + 1)">Next »</a>
+      </li>
+    </ul>
+   </th>
+  </tfoot>

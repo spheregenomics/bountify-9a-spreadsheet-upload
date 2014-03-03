@@ -1,0 +1,30 @@
+<p>
+  <strong>Assembly:</strong>
+  <%= @batch.assembly %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @batch.description %>
+</p>
+
+<div ng-controller="ShowCtrl">
+  <table border="1">
+    <tr>
+      <th></th>
+      <th>chrom</th>
+      <th>chrom_start</th>
+      <th>chrom_end</th>
+    </tr>
+    <% @batch.batch_details.each do |batch_detail|%>
+     <tr>
+        <td><input type="checkbox" ng-checked="isSelected(<%= batch_detail.id %>)" ng-click="updateSelection($event.target.checked, <%= batch_detail.id %>)"/></td>
+        <td><%= batch_detail.chrom %></td>     
+        <td><%= batch_detail.chrom_start %></td>
+        <td><%= batch_detail.chrom_end %></td>
+     </tr>
+     <% end %>
+  </table>
+
+  <p ng-show="selected.length > 0"><a ng-href="<%= url_for controller: 'batches', action: 'download_xlsx' %>/{{selectedURLFormat}}&amp;ext=.xlsx" download>Download batch details</a></p>
+</div>
