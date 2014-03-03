@@ -1,3 +1,4 @@
+# Overview
 The code that I need help with manages a read-only table. 
 It has the following features which are all working now:
 
@@ -13,15 +14,16 @@ the Ransack gem and a complex object is created and sent to the server for the s
   the table is for batch_details
 
 
-SETUP
-----
-If you run the latest migration 20140220163621_create_batches.rb it will create the batches tables
-seeds.rb has some dumps from my dev database for these tables. batch_ids of 1006, 1072, 1055, 1075 998 would be good for testing
+# Setup
+- If you run the latest migration 20140220163621_create_batches.rb it will create the batches tables
+- seeds.rb has some dumps from my dev database for these tables. 
+- batch_ids of 1006, 1072, 1055, 1075 998 would be good for testing
+- Gemfile2 is the original project gemfile
+- Some older versions of the code that may help you are in tmp/oldfiles 
 
 
 
-REQUIREMENTS
-------------
+# Requirements
 0. Table should be generic so any rails model along with the hash of columns can be passed to it
 1. Clean up and organise the code tests written for it in both Angular and rails.
 2. Move the bulk of the code to a directive
@@ -35,8 +37,7 @@ REQUIREMENTS
 
 
 
-Directive Parameters
---------------------
+#Directive Parameters
 columns: hash of columns. This needs to be accessible to both Rails and Angular
 table: underlying physical table (maybe embed this information in the columns hash ?)
 filterable: boolean which enables the modal filter functionality
@@ -51,8 +52,8 @@ probably also need a way to link the detail of the table to the page header... m
 
 
 
-List of columns in Rails
-------------------------
+#List of columns in Rails
+
   FIELDS =    { source:         'Source',
 	              status:         'Status',
 	              chrom:          'Chromosome',
