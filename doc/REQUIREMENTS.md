@@ -38,16 +38,16 @@ the Ransack gem and a complex object is created and sent to the server for the s
 
 
 #Directive Parameters
-columns: hash of columns. This needs to be accessible to both Rails and Angular
-table: underlying physical table (maybe embed this information in the columns hash ?)
-filterable: boolean which enables the modal filter functionality
-hide_columns: boolean which enables the ability to hide columns, as well as the show all button
-selectable: boolean, which enables the check box
-pagination: boolean, enables the pagination links including page and row counts
-deletable: boolean, enables the delete button
-sortable: sort rows by clicking on header
-export: xls / csv / pdf
-probably also need a way to link the detail of the table to the page header... maybe pass in the batch_id ?
+- columns: hash of columns. This needs to be accessible to both Rails and Angular
+- table: underlying physical table (maybe embed this information in the columns hash ?)
+- filterable: boolean which enables the modal filter functionality
+- hide_columns: boolean which enables the ability to hide columns, as well as the show all button
+- selectable: boolean, which enables the check box
+- pagination: boolean, enables the pagination links including page and row counts
+- deletable: boolean, enables the delete button
+- sortable: sort rows by clicking on header
+- export: xls / csv / pdf
+- probably also need a way to link the detail of the table to the page header... maybe pass in the batch_id ?
 
 
 
