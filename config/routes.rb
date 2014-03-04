@@ -1,7 +1,9 @@
 SpreadsheetUpload::Application.routes.draw do
-  get 'batches/download_xlsx' => 'batches#download_xlsx'
-  
-  resources :batches
+  namespace :api do
+    get 'batches/download_xlsx' => 'batches#download_xlsx'
+    
+    resources :batches
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
