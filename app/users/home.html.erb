@@ -1,0 +1,300 @@
+
+
+
+
+
+
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>surfscore.me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Our surf-styles -->
+    <link href="./css/surfscore.css" rel="stylesheet">
+    <link href="./css/market.css" rel="stylesheet">
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/bootstrap-responsive.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Exo:500,100,400' rel='stylesheet' type='text/css'>    
+    <style>
+
+ 
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    
+    
+
+
+
+
+<body> 
+<div class="background-section">
+  <div class="signup-section" id="signup-section"> <!-- Background image section -->
+        <!-- NAVBAR
+    ================================================== -->
+    <div class="container navbar-wrapper">
+      <div class="navbar navbar-inverse">
+        <div class="span1 logo">
+          <img src="./img/surfscore/surfscore-logo.png">
+        </div>
+          <a class="surfscore-brand" href="home.php">surfscore</a>
+          <div class="nav-collapse">
+    </div>
+  </div>
+
+    </div><!-- /.container -->
+
+
+<!-- MAIN SITE CONTENT
+================================================== -->
+  
+      <!-- SIGN-UP SECTION (page a visitor sees first)
+    ================================================== -->
+
+
+
+<div class="container container-signup">
+    <div class="row">
+        <div class="span6 frost-layer-home"> <!-- Left Block -->
+                
+          <h1 class="custom-h1">
+             
+    Improve Your Surfing
+   
+          </h1> 
+          </br>
+          <h2 class="custom-h2">
+             
+    Track Each Wave. Surf Better.</br> 
+   
+          </h2>
+           
+          <h5 class="custom-h5">
+             
+    Track all your metrics, get better, see what's happening
+    and improve consistently. Compete with friends and be the best surfer you could possibly be.  
+   
+          </h5>
+          
+          <h3 class="custom-h3">
+             
+    Request Early Access Now!
+   
+          </h3>
+          
+             
+    <!-- Begin email form -->
+      <form id="email" action="./includes/db_surfscore.inc.php" method="post">
+          <div class="email input-append">
+            <input size="20" id="appendedInputButton" type="email" required="" placeholder="Your email address" name="email">
+            <button class="btn btn-danger" type="submit">»</button>
+          </div>        
+      </form>
+               
+        </div>  <!-- End of Left Block -->
+          
+          
+        <div class="span5"> <!-- Middle Block -->   
+             
+    <!--<img class="img-home" src="./img/surfscore/phone_tablet.png" >  -->
+   
+        </div>  <!-- End of Middle Block -->
+        
+
+    </div> <!-- End of Row -->
+  </div> <!-- End of Background image section -->
+
+</div> <!-- end of sign-up section container -->  
+
+
+
+
+
+
+
+
+
+
+      <!-- FOOTER -->
+
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/bootstrap-transition.js"></script>
+    <script src="./js/bootstrap-alert.js"></script>
+    <script src="./js/bootstrap-modal.js"></script>
+    <script src="./js/bootstrap-dropdown.js"></script>
+    <script src="./js/bootstrap-scrollspy.js"></script>
+    <script src="./js/bootstrap-tab.js"></script>
+    <script src="./js/bootstrap-tooltip.js"></script>
+    <script src="./js/bootstrap-popover.js"></script>
+    <script src="./js/bootstrap-button.js"></script>
+    <script src="./js/bootstrap-collapse.js"></script>
+    <script src="./js/bootstrap-carousel.js"></script>
+    <script src="./js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+<script type="text/javascript" id="js">
+  $(document).ready(function() {
+    $('#table').bind('click', function() {
+      $('#th1').siblings().css({'border-bottom':'none', 'background-color':'inherit'});
+      $('#th1').css({'border-bottom':'10px solid red', 'background-color':'white'});
+      $('#th2').siblings().css({'border-bottom':'none', 'background-color':'inherit'});
+      $('#th2').css({'border-bottom':'10px solid red', 'background-color':'white'});
+      $('#th3').siblings().css({'border-bottom':'none', 'background-color':'inherit'});
+      $('#th3').css({'border-bottom':'10px solid red', 'background-color':'white'});
+    });
+    $('#table').trigger('click');
+    // call the tablesorter plugin
+    $("#table").tablesorter({sortList: [[2,1]],});
+    $("#table2").tablesorter({sortList: [[2,1]],});
+    $("#table3").tablesorter({sortList: [[2,1]],});
+    $(".tableheader").click(function() {
+      console.log(this);
+      $(this).siblings().css({'border-bottom':'none', 'background-color':'inherit'});
+      $(this).css({'border-bottom':'10px solid red', 'background-color':'white'}); }
+                           );
+    
+  });
+</script>    
+
+<!-- Google Analytics Code -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36458969-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- End of Google Analytics Code --> 
+
+  </body>
+</html>
+
+
+</div> <!-- End container -->
+
+
+
+
+
+
+<script src="ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="./js/jquery.backstretch.min.js"></script>
+<script>
+  // To attach Backstrech as the body's backgroun
+  //$.backstretch("./img/background/data-section.jpg");
+
+  // You may also attach Backstretch to a block-level element
+  //$(".foo").backstretch("signup-section.jpg");
+
+  // Or, to start a slideshow, just pass in an array of images
+  $(".signup-section").backstretch([
+    "./img/background/bck7.jpg",
+    "./img/background/bck3.png",
+  ], {duration: 4000, fade: 750});
+</script>
+
+</div>  
+  </body> 
+</html> 
+
+<!-- Surf page specific styles
+================================================== -->
+
+<style>
+  body {
+      background-color: black;
+      color: #FFFFFF;
+    }
+</style>
+
+
+
+</head>
+
+<!-- Start of Sign-up page -->
+
+<!-- End of Leaderboard page -->
+
+
+
+
+
+
