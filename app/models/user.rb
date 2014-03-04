@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  devise :token_authenticatable, :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
 
   has_many :batches
