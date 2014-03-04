@@ -49,5 +49,6 @@ gem 'angularjs-rails'
 gem 'axlsx'
 gem 'zip-zip'
 gem "devise", ">= 2.2.3"
+gem 'protected_attributes', '~> 1.0.1'   # TODO get rid of this
 
 
