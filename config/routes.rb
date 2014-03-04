@@ -1,7 +1,7 @@
 SpreadsheetUpload::Application.routes.draw do
   devise_for :users
 
-  namespace :api do
+  namespace :api, defaults: {format: :json} do
     get 'batches/download_xlsx' => 'batches#download_xlsx'
     
     resources :batches
