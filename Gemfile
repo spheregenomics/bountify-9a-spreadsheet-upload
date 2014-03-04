@@ -48,5 +48,6 @@ gem 'roo'
 gem 'angularjs-rails'
 gem 'axlsx'
 gem 'zip-zip'
+gem "devise", ">= 2.2.3"
 
 
